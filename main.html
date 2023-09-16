@@ -80,16 +80,27 @@
   src: url(https://fonts.gstatic.com/s/jost/v13/92zPtBhPNqw79Ij1E865zBUv7mx9IgVF.woff)
     format("woff");
 }
-.background-text {
+
+  </style>
+  <style>
+    .background-text {
     font-family: monospace;
-    font-size: 400px;
+    font-size: 8vw; /* Responsive font size based on viewport width */
     font-weight: bold;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%) rotate(90deg); /* Rotate by 90 degrees */
     z-index: -1;
-  }
+    opacity: 0.3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .background-text {
+        font-size: 25vw; /* Adjust font size for smaller screens */
+    }
+}
 
   </style>
   
