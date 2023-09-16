@@ -2352,6 +2352,12 @@ goTopButton.addEventListener("click", () => {
     location.reload(); // Refresh the page after the pop-up is closed
   },1000);
   });
+  window.onload = function() {
+        if (performance.navigation.type === 1) {
+            // The page was reloaded, redirect to index.html
+            window.location.href = "index.html";
+        }
+    }
 </script>
 <script type="text/javascript">
   options = {
